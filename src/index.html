@@ -30,11 +30,33 @@
     </section>
 
     <!-- Reservation Form Section -->
+    <!-- Reservation Form Section -->
+    <!-- Reservation Form Section -->
     <section class="container reservation">
       <h2>Make a Reservation</h2>
-      <!-- Form goes here -->
-      <form action="reservation.php" method="POST">
-        <!-- Your reservation form fields go here -->
+      <form action="reservation.php" method="POST" class="reservation-form">
+        <div class="form-group">
+          <input
+            type="date"
+            id="reservation-date"
+            name="reservation-date"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <select id="reservation-time" name="reservation-time">
+            <!-- Times will be generated dynamically using JavaScript -->
+          </select>
+        </div>
+
+        <div class="form-group">
+          <select id="party-size" name="party-size">
+            <!-- Options for party size -->
+          </select>
+        </div>
+
+        <button type="submit">Find a Table</button>
       </form>
     </section>
 
@@ -82,7 +104,7 @@
       </footer>
     </section>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
     <!-- Add your JavaScript file here -->
   </body>
 </html>
