@@ -7,6 +7,10 @@ h4 {
   text-transform: uppercase;
 }
 
+h4 {
+  font-size: smaller;
+}
+
 p {
   font-family: Montserrat;
   font-size: small;
@@ -27,7 +31,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  text-align: left;
+  background-color: transparent;
+  position: relative;
 }
 header img {
   max-width: 100px;
@@ -35,7 +40,29 @@ header img {
 }
 nav {
   display: flex;
-  gap: 30px;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  gap: 50px;
+
+}
+
+nav::before,
+nav::after {
+  content: "";
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  width: calc(100% + 100px);
+  left: -20px;
+  right: -20px;
+}
+nav::before {
+  top: 0;
+}
+nav::after {
+  bottom: 0;
 }
 
 /* Container Styles */
@@ -50,16 +77,16 @@ nav {
 
 /* Banner Styles */
 .banner {
-  display: flex; 
-  justify-content: space-between; 
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 .banner-images {
-  display: flex; 
-  gap: 10px; 
+  display: flex;
+  gap: 10px;
 }
 .banner img {
-  max-height: 400px; 
+  max-height: 400px;
 }
 
 /* Reservation Form Styles */
