@@ -1,0 +1,88 @@
+h1,
+h2,
+h3,
+h4 {
+  font-family: Playfair;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: Montserrat;
+  font-size: small;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("../img/white-wood.jpeg");
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  text-align: left;
+}
+header img {
+  max-width: 100px;
+  height: auto;
+}
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+/* Container Styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+}
+
+/* Banner Styles */
+.banner {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+}
+.banner-images {
+  display: flex; 
+  gap: 10px; 
+}
+.banner img {
+  max-height: 400px; 
+}
+
+/* Reservation Form Styles */
+.reservation {
+}
+
+/* Content STyles */
+.group-dining {
+}
+
+.wine-dinner {
+}
+
+.about {
+}
+
+/* Footer Styles */
+.footer {
+  background-image: url("../img/Aba-wood-1.jpg");
+  background-size: cover;
+  color: #fff;
+  padding: 20px;
+  text-align: right;
+}
+
+/* Add more styles as needed */
