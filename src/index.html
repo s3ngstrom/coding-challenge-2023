@@ -1,110 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aba Chicago</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <!-- Add your CSS file here -->
-    <style></style>
-  </head>
-  <body>
+</head>
+<body>
     <!-- Header Section -->
     <header>
-      <img src="./img/Aba-logo.png" alt="Aba Logo" />
-      <nav>
-        <h4>Reserve</h4>
-        <h4>Menu</h4>
-        <h4>Group Dining</h4>
-        <h4>Events</h4>
-        <h4>Team</h4>
-      </nav>
+        <img src="./img/Aba-logo.png" alt="Aba Logo" />
+        <nav>
+            <h4>Reserve</h4>
+            <h4>Menu</h4>
+            <h4>Group Dining</h4>
+            <h4>Events</h4>
+            <h4>Team</h4>
+        </nav>
     </header>
 
     <!-- Banner Image Section -->
     <section class="container banner">
-      <div class="banner-images">
-        <img src="./img/up-47.jpg" alt="Banner Image 1" />
-        <img src="./img/Aba_VillageSalad.jpg" alt="Banner Image 2" />
-      </div>
+        <div class="banner-images">
+            <img src="./img/up-47.jpg" alt="Banner Image 1" />
+            <img src="./img/Aba_VillageSalad.jpg" alt="Banner Image 2" />
+        </div>
     </section>
 
-    <!-- Reservation Form Section -->
-    <!-- Reservation Form Section -->
     <!-- Reservation Form Section -->
     <section class="container reservation">
-      <h2>Make a Reservation</h2>
-      <form action="reservation.php" method="POST" class="reservation-form">
-        <div class="form-group">
-          <input
-            type="date"
-            id="reservation-date"
-            name="reservation-date"
-            required
-          />
+        <h2>Make a Reservation</h2>
+        <form action="reservation.php" method="POST" class="reservation-form">
+            <div class="form-group">
+                <input
+                    type="date"
+                    id="reservation-date"
+                    name="reservation-date"
+                    required
+                />
+            </div>
+
+            <div class="form-group">
+                <select id="reservation-time" name="reservation-time">
+                    <!-- Times will be generated dynamically using JavaScript -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <select id="party-size" name="party-size">
+                    <!-- Options for party size -->
+                </select>
+            </div>
+
+            <button type="submit">Find a Table</button>
+        </form>
+    </section>
+
+<!-- Group Dining Section -->
+<section class="container group-dining">
+  <div class="group-dining-content">
+      <div class="group-dining-text">
+          <h2>Group Dining at Aba</h2>
+          <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+              commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+              velit esse cillum dolore eu fugiat nulla pariatur.
+          </p>
+          <button class="aba-button">Plan Your Party</button>
+      </div>
+      <div class="image-container">
+          <img src="./img/up-35.jpg" alt="Group Dining at Aba" class="square-image" />
+      </div>
+  </div>
+</section>
+
+
+<!-- Wine Dinner Section -->
+<section class="container wine-dinner">
+    <div class="wine-dinner-content">
+        <div class="image-container">
+            <img src="./img/up-35.jpg" alt="Wine Dinner" class="square-image" />
         </div>
+        <div class="wine-dinner-text">
+            <h2>Wine Dinner</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+            </p>
+            <p>June 13th, 2018 at 7pm</p>
+            <button class="aba-button">Learn More</button>
 
-        <div class="form-group">
-          <select id="reservation-time" name="reservation-time">
-            <!-- Times will be generated dynamically using JavaScript -->
-          </select>
         </div>
+    </div>
+</section>
 
-        <div class="form-group">
-          <select id="party-size" name="party-size">
-            <!-- Options for party size -->
-          </select>
-        </div>
 
-        <button type="submit">Find a Table</button>
-      </form>
-    </section>
-
-    <!-- Group Dining Section -->
-    <section class="container group-dining">
-      <h2>Group Dining at Aba</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur.
-      </p>
-    </section>
-
-    <!-- Wine Dinner Section -->
-    <section class="container wine-dinner">
-      <h2>Wine Dinner</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-      </p>
-    </section>
-
-    <!-- About Section -->
-    <section class="container about">
-      <h2>About Aba</h2>
-      <p>
-        Aba is a restaurant with a rooftop patio located in Chicago's historic
-        Fulton Market District. This is Chef CJ Jacobson's second restaurant
-        with Lettuce Entertain You, and is an extension of Ēma (mother in
-        Hebrew) in River North. Aba, meaning father in Hebrew, will incorporate
-        Ēma's style of cooking with a larger influence of steak, raw and chilled
-        seafood. The beverage program is crafted by Wine Director Ryan Arnold
-        and Mixologist Liz Pearce and showcases Mediterranean-inspired rare
-        wines and spirits.
-      </p>
-    </section>
+<!-- About Section -->
+<section class="container about">
+  <div class="about-content">
+      <div class="about-text">
+          <h2>About Aba</h2>
+          <p>
+              Aba is a restaurant with a rooftop patio located in Chicago's historic
+              Fulton Market District. This is Chef CJ Jacobson's second restaurant
+              with Lettuce Entertain You, and is an extension of Ēma (mother in
+              Hebrew) in River North. Aba, meaning father in Hebrew, will incorporate
+              Ēma's style of cooking with a larger influence of steak, raw and chilled
+              seafood. The beverage program is crafted by Wine Director Ryan Arnold
+              and Mixologist Liz Pearce and showcases Mediterranean-inspired rare
+              wines and spirits.
+          </p>
+      </div>
+      <div class="image-container">
+          <img src="./img/up-42.jpg" alt="About Aba" class="square-image" />
+      </div>
+  </div>
+</section>
 
     <!-- Footer Section -->
     <section class="footer">
-      <footer>
-        <h3>Footer Content</h3>
-      </footer>
+        <footer>
+            <h3>Footer Content</h3>
+        </footer>
     </section>
 
     <script src="./script.js"></script>
     <!-- Add your JavaScript file here -->
-  </body>
+</body>
 </html>

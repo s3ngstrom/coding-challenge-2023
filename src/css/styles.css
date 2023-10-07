@@ -3,8 +3,8 @@ h2,
 h3,
 h4 {
   font-family: Playfair;
-  font-weight: 100;
   text-transform: uppercase;
+  font-weight: 100;
 }
 
 h4 {
@@ -16,7 +16,8 @@ p {
   font-size: small;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -27,7 +28,6 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
-
 
 /* Header Styles */
 header {
@@ -81,8 +81,6 @@ nav::after {
 }
 
 /* Banner Styles */
-/* Banner Styles */
-/* Banner Styles */
 .banner {
   display: flex;
   justify-content: space-between;
@@ -93,7 +91,7 @@ nav::after {
   background-image: url("../img/banner-image.jpg"); /* Replace with your image path */
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom /* Anchor the image to the bottom */
+  background-position: bottom; /* Anchor the image to the bottom */
 }
 
 .banner-images {
@@ -102,7 +100,7 @@ nav::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px
+  gap: 10px;
 }
 
 .banner img {
@@ -111,9 +109,7 @@ nav::after {
   object-fit: cover; /* Crop and scale the image as needed */
 }
 
-
 /* Reservation Form Styles */
-/* Add this CSS to your existing styles */
 .reservation-form {
   font-family: Montserrat;
   display: flex;
@@ -168,16 +164,124 @@ input {
   width: 100%;
 }
 
-
 /* Content STyles */
+/* Group Dining Section */
 .group-dining {
+  display: flex;
+  flex-direction: column-reverse; /* Reverse the order of the elements on mobile */
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 
+.group-dining-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.group-dining-text {
+  padding: 20px;
+  text-align: center;
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+}
+
+.aba-button {
+  font-family: Playfair;
+  font-weight: 100;
+  font-size: small;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  background-color: #123c43;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* Position the image to the right */
+  align-items: center;
+}
+
+.group-dining img {
+  max-width: 200px; /* Adjust the width as needed */
+  height: auto;
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+  .group-dining-content {
+    flex-direction: column;
+  }
+
+  .group-dining-text {
+    text-align: center;
+  }
+}
+
+/* Wine Dinner Section */
 .wine-dinner {
+    display: flex;
+    flex-direction: column-reverse; /* Reverse the order of the elements on mobile */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
 }
 
-.about {
+.wine-dinner-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
+
+.wine-dinner-text {
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+}
+
+.wine-dinner img {
+    max-width: 200px; /* Adjust the width as needed */
+    height: auto;
+}
+
+/* About Section */
+.about {
+  display: flex;
+  flex-direction: column-reverse; /* Reverse the order of the elements on mobile */
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.about-text {
+  padding: 20px;
+  text-align: center;
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+}
+
+.about img {
+  max-width: 200px; /* Adjust the width as needed */
+  height: auto;
+}
+
 
 /* Footer Styles */
 .footer {
