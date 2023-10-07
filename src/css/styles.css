@@ -38,10 +38,12 @@ header {
   background-color: transparent;
   position: relative;
 }
+
 header img {
   max-width: 100px;
   height: auto;
 }
+
 nav {
   display: flex;
   flex-direction: row;
@@ -63,9 +65,11 @@ nav::after {
   left: -20px;
   right: -20px;
 }
+
 nav::before {
   top: 0;
 }
+
 nav::after {
   bottom: 0;
 }
@@ -164,9 +168,9 @@ input {
   width: 100%;
 }
 
-/* Content STyles */
-/* Group Dining Section */
-.group-dining {
+.group-dining,
+.about,
+.reservation {
   display: flex;
   flex-direction: column-reverse; /* Reverse the order of the elements on mobile */
   justify-content: space-between;
@@ -174,7 +178,9 @@ input {
   padding: 20px;
 }
 
-.group-dining-content {
+.group-dining-content,
+.about-content,
+.reservation-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -182,11 +188,14 @@ input {
   width: 100%;
 }
 
-.group-dining-text {
+.group-dining-text,
+.wine-dinner-text,
+.about-text,
+.reservation-text {
   padding: 20px;
   text-align: center;
-  border-top: 2px solid #333;
-  border-bottom: 2px solid #333;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
 }
 
 .aba-button {
@@ -208,53 +217,31 @@ input {
   align-items: center;
 }
 
-.group-dining img {
+
+.group-dining img,
+.about img,
+.reservation img {
   max-width: 200px; /* Adjust the width as needed */
   height: auto;
 }
 
 /* Media Query for smaller screens */
 @media screen and (max-width: 768px) {
-  .group-dining-content {
+  .group-dining-content,
+  .about-content,
+  .reservation-content {
     flex-direction: column;
   }
 
-  .group-dining-text {
+  .group-dining-text,
+  .about-text,
+  .reservation-text {
     text-align: center;
   }
 }
 
 /* Wine Dinner Section */
 .wine-dinner {
-    display: flex;
-    flex-direction: column-reverse; /* Reverse the order of the elements on mobile */
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
-
-.wine-dinner-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.wine-dinner-text {
-    padding: 20px;
-    text-align: center;
-    border-top: 2px solid #333;
-    border-bottom: 2px solid #333;
-}
-
-.wine-dinner img {
-    max-width: 200px; /* Adjust the width as needed */
-    height: auto;
-}
-
-/* About Section */
-.about {
   display: flex;
   flex-direction: column-reverse; /* Reverse the order of the elements on mobile */
   justify-content: space-between;
@@ -262,7 +249,7 @@ input {
   padding: 20px;
 }
 
-.about-content {
+.wine-dinner-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -270,18 +257,10 @@ input {
   width: 100%;
 }
 
-.about-text {
-  padding: 20px;
-  text-align: center;
-  border-top: 2px solid #333;
-  border-bottom: 2px solid #333;
-}
-
-.about img {
+.wine-dinner img {
   max-width: 200px; /* Adjust the width as needed */
   height: auto;
 }
-
 
 /* Footer Styles */
 .footer {
@@ -292,4 +271,4 @@ input {
   text-align: right;
 }
 
-/* Add more styles as needed */
+/* Add more styles
