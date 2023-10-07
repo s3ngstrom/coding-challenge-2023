@@ -32,9 +32,9 @@ body {
 /* Header Styles */
 header {
   display: flex;
-  justify-content: center; /* Center the content horizontally */
-  align-items: center; /* Center the content vertically */
-  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
   background-color: transparent;
   position: relative;
 }
@@ -42,17 +42,41 @@ header {
 header img {
   max-width: 100px;
   height: auto;
+  margin-right: 20px;
 }
 
 nav {
   display: flex;
-  flex-direction: row;
+  flex-direction: c;
   align-items: center;
   text-align: center;
   position: relative;
-  gap: 50px;
+  gap: 60px;
   white-space: nowrap;
-  margin-left: 100px; /* Add a margin to separate from the logo */
+  flex-grow: 0.5;
+}
+
+nav h4 {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  margin: 10 10px;
+}
+
+nav h4::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s;
+}
+
+nav h4:hover::before {
+  width: 100%;
 }
 
 nav::before,
@@ -61,9 +85,9 @@ nav::after {
   height: 1px;
   background-color: #000;
   position: absolute;
-  width: calc(100% + 100px);
-  left: -20px;
-  right: -20px;
+  text-align: center;
+  width: 100%;
+  margin: 10px;
 }
 
 nav::before {
@@ -88,14 +112,14 @@ nav::after {
 .banner {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end; /* Anchor the content to the bottom */
-  overflow: hidden; /* Hide overflow for cropped images */
-  height: 300px; /* Adjust the height as needed */
-  background-color: #f0f0f0; /* Set a background color for the banner */
-  background-image: url("../img/banner-image.jpg"); /* Replace with your image path */
+  align-items: flex-end;
+  overflow: hidden;
+  height: 300px;
+  background-color: #f0f0f0;
+  background-image: url("../img/banner-image.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom; /* Anchor the image to the bottom */
+  background-position: bottom;
 }
 
 .banner-images {
@@ -110,7 +134,7 @@ nav::after {
 .banner img {
   width: 120%;
   height: 120%;
-  object-fit: cover; /* Crop and scale the image as needed */
+  object-fit: cover;
 }
 
 /* Reservation Form Styles */
@@ -125,7 +149,6 @@ nav::after {
   flex: 1;
 }
 
-/* Style for input fields */
 input[type="date"],
 input[type="number"] {
   font-family: Montserrat;
@@ -134,12 +157,11 @@ input[type="number"] {
   border: 1px solid #ccc;
 }
 
-/* Style for select dropdown */
 select {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
-  appearance: none; /* Remove default dropdown arrow */
+  appearance: none;
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="%23ccc" d="M8 12.22L12.39 7.83a1 1 0 10-1.41-1.41L8 9.4 4.02 5.42a1 1 0 00-1.45 1.38l4.42 4.42a1 1 0 001.42 0z"/></svg>');
   background-repeat: no-repeat;
   background-position: right center;
@@ -147,7 +169,6 @@ select {
   font-family: Montserrat;
 }
 
-/* Style for the "Find a Table" button */
 button {
   padding: 10px 20px;
   background-color: #123c43;
@@ -156,12 +177,10 @@ button {
   cursor: pointer;
 }
 
-/* Remove default button focus outline */
 button:focus {
   outline: none;
 }
 
-/* Adjust the width of form elements as needed */
 label,
 select,
 input {
@@ -172,7 +191,7 @@ input {
 .about,
 .reservation {
   display: flex;
-  flex-direction: column-reverse; /* Reverse the order of the elements on mobile */
+  flex-direction: column-reverse;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
@@ -194,6 +213,7 @@ input {
 .reservation-text {
   padding: 20px;
   text-align: center;
+  width: 100%;
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
 }
@@ -213,19 +233,17 @@ input {
 .image-container {
   flex: 1;
   display: flex;
-  justify-content: flex-end; /* Position the image to the right */
+  justify-content: flex-end;
   align-items: center;
 }
-
 
 .group-dining img,
 .about img,
 .reservation img {
-  max-width: 200px; /* Adjust the width as needed */
+  max-width: 200px;
   height: auto;
 }
 
-/* Media Query for smaller screens */
 @media screen and (max-width: 768px) {
   .group-dining-content,
   .about-content,
@@ -240,10 +258,9 @@ input {
   }
 }
 
-/* Wine Dinner Section */
 .wine-dinner {
   display: flex;
-  flex-direction: column-reverse; /* Reverse the order of the elements on mobile */
+  flex-direction: column-reverse;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
@@ -258,11 +275,10 @@ input {
 }
 
 .wine-dinner img {
-  max-width: 200px; /* Adjust the width as needed */
+  max-width: 200px;
   height: auto;
 }
 
-/* Footer Styles */
 .footer {
   background-image: url("../img/Aba-wood-1.jpg");
   background-size: cover;
@@ -270,5 +286,3 @@ input {
   padding: 20px;
   text-align: right;
 }
-
-/* Add more styles
