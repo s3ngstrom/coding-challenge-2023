@@ -137,37 +137,53 @@ nav::after {
   object-fit: cover;
 }
 
+/* Style the form fields to have the same height and width */
+.form-group {
+  display: inline-block;
+  margin-right: 10px;
+  width: 200px; /* Set a fixed width for all form elements */
+}
+
+/* Style the input fields */
+input[type="date"],
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select {
+  width: 100%; /* Make input fields and selects expand to fill the form-group width */
+  padding: 10px; /* Add padding for consistent height and spacing */
+  margin: 0; /* Remove default margin */
+}
+
+/* Style the button */
+#submit-reservation {
+  display: inline-block;
+  margin-top: 10px;
+  width: 200px; /* Set a fixed width for the button */
+  padding: 10px; /* Add padding for consistent height and spacing */
+}
+
+
+
 /* Reservation Form Styles */
-.reservation-form {
+/*
+.form-group {
   font-family: Montserrat;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  width: 200px;
+  margin-bottom: 10px;
 }
 
-.form-group {
-  flex: 1;
-}
 
 input[type="date"],
-input[type="number"] {
-  font-family: Montserrat;
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-}
-
+input[type="number"],
 select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  appearance: none;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="%23ccc" d="M8 12.22L12.39 7.83a1 1 0 10-1.41-1.41L8 9.4 4.02 5.42a1 1 0 00-1.45 1.38l4.42 4.42a1 1 0 001.42 0z"/></svg>');
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: 16px 16px;
   font-family: Montserrat;
-}
+  font-size: smaller;
+  border: 1px solid #ccc;
+  flex: 1; 
+  margin-right: 10px; 
 
 button {
   padding: 10px 20px;
@@ -175,10 +191,22 @@ button {
   color: #fff;
   border: none;
   cursor: pointer;
+  flex: 0; 
 }
 
-button:focus {
-  outline: none;
+.reservation-form {
+  display: flex;
+  flex-wrap: wrap; 
+}
+
+.reservation-form button {
+  flex-basis: 100%; 
+  margin-top: 10px; 
+}
+
+.reservation-form button,
+.customer-info-form button {
+  align-self: flex-start;
 }
 
 label,
@@ -186,6 +214,7 @@ select,
 input {
   width: 100%;
 }
+*/
 
 .group-dining,
 .about,
@@ -245,11 +274,7 @@ input {
 }
 
 @media screen and (max-width: 768px) {
-  .group-dining-content,
-  .about-content,
-  .reservation-content {
-    flex-direction: column;
-  }
+
 
   .group-dining-text,
   .about-text,
@@ -291,14 +316,13 @@ input {
   flex-wrap: wrap;
 }
 
-/* Style for the footer container */
 .footer-container {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   white-space: nowrap;
   flex: 1;
-  margin-right: 100px; /* Add some margin to separate it from the small text bar */
+  margin-right: 100px; 
 }
 
 /* Style for each column within the footer container */
@@ -306,10 +330,9 @@ input {
   text-align: left;
   width: 100%;
   padding: 20px;
-  margin-right: 50px; 
+  margin-right: 50px;
 }
 
-/* Style for headings and paragraphs inside columns */
 .footer-column h3 {
   font-weight: bold;
   margin-bottom: 10px;
@@ -326,13 +349,13 @@ input {
 }
 
 .footer-menu {
-font-family: Playfair;  
-text-transform: uppercase;
-font-weight: bold;
+  font-family: Playfair;
+  text-transform: uppercase;
+  font-weight: bold;
   color: #fff;
   text-align: center;
   width: 100%;
-  margin-top: 100px; 
+  margin-top: 100px;
 }
 
 .footer-menu a {

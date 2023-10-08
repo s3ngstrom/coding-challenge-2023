@@ -1,163 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aba Chicago</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <!-- Add your CSS file here -->
-</head>
-<body>
+  </head>
+  <body>
     <!-- Header Section -->
     <header>
       <a href="index.html"><img src="./img/Aba-logo.png" alt="Aba Logo" /></a>
       <nav>
-          <a href="#"><h4>Reserve</h4></a>
-          <a href="#"><h4>Menu</h4></a>
-          <a href="#"><h4>Group Dining</h4></a>
-          <a href="#"><h4>Events</h4></a>
-          <a href="#"><h4>Team</h4></a>
+        <a href="#"><h4>Reserve</h4></a>
+        <a href="#"><h4>Menu</h4></a>
+        <a href="#"><h4>Group Dining</h4></a>
+        <a href="#"><h4>Events</h4></a>
+        <a href="#"><h4>Team</h4></a>
       </nav>
-  </header>
-  
-  
+    </header>
 
     <!-- Banner Image Section -->
     <section class="container banner">
-        <div class="banner-images">
-            <img src="./img/up-47.jpg" alt="Banner Image 1" />
-            <img src="./img/Aba_VillageSalad.jpg" alt="Banner Image 2" />
-        </div>
+      <div class="banner-images">
+        <img src="./img/up-47.jpg" alt="Banner Image 1" />
+        <img src="./img/Aba_VillageSalad.jpg" alt="Banner Image 2" />
+      </div>
     </section>
 
     <!-- Reservation Form Section -->
     <section class="container reservation">
       <div class="reservation-content">
         <div class="reservation-text">
-        <h2>Make a Reservation</h2>
-        <form action="reservation.php" method="POST" class="reservation-form">
+          <h2>Make a Reservation</h2>
+          <form action="reservation.php" method="POST" id="reservation-form">
             <div class="form-group">
-                <input
-                    type="date"
-                    id="reservation-date"
-                    name="reservation-date"
-                    required
-                />
+              <input
+                type="date"
+                id="reservation-date"
+                name="reservation-date"
+                required
+              />
             </div>
 
             <div class="form-group">
-                <select id="reservation-time" name="reservation-time">
-                    <!-- Times will be generated dynamically using JavaScript -->
-                </select>
+              <select
+                id="reservation-time"
+                name="reservation-time"
+                placeholder="Reservation Time"
+              ></select>
             </div>
 
             <div class="form-group">
-                <select id="party-size" name="party-size">
-                    <!-- Options for party size -->
-                </select>
+              <select
+                id="party-size"
+                name="party-size"
+                placeholder="Party Size"
+              >
+                <!-- Options for party size will be generated dynamically using JavaScript -->
+              </select>
             </div>
 
-            <button type="submit">Find a Table</button>
-        </form>
+            <button type="button" id="submit-reservation">Find a Table</button>
+          </form>
+
+          <!-- Customer Information Form -->
+          <form id="customer-info-form" style="display: none">
+            <div class="form-group">
+              <input
+                type="text"
+                id="customer-name"
+                name="customer-name"
+                placeholder="Name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="tel"
+                id="customer-phone"
+                name="customer-phone"
+                placeholder="Phone"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                id="customer-email"
+                name="customer-email"
+                placeholder="Email"
+                required
+              />
+            </div>
+            <button type="button" id="submit-customer-info">Submit</button>
+          </form>
+
+          <!-- Success Message -->
+          <div id="success-message" style="display: none">
+            <p>
+              Reservation successfully submitted. We're looking forward to
+              seeing you!
+            </p>
+          </div>
+
+          <!-- Validation Error Message -->
+          <div id="validation-error" style="display: none">
+            <p>Please fill out all fields.</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
     </section>
 
-<!-- Group Dining Section -->
-<section class="container group-dining">
-  <div class="group-dining-content">
-      <div class="group-dining-text">
+    <!-- Group Dining Section -->
+    <section class="container group-dining">
+      <div class="group-dining-content">
+        <div class="group-dining-text">
           <h2>Group Dining at Aba</h2>
           <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-              commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur.
           </p>
           <button class="aba-button">Plan Your Party</button>
-      </div>
-      <div class="image-container">
-          <img src="./img/up-35.jpg" alt="Group Dining at Aba" class="square-image" />
-      </div>
-  </div>
-</section>
-
-
-<!-- Wine Dinner Section -->
-<section class="container wine-dinner">
-    <div class="wine-dinner-content">
+        </div>
         <div class="image-container">
-            <img src="./img/up-35.jpg" alt="Wine Dinner" class="square-image" />
+          <img
+            src="./img/up-35.jpg"
+            alt="Group Dining at Aba"
+            class="square-image"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Wine Dinner Section -->
+    <section class="container wine-dinner">
+      <div class="wine-dinner-content">
+        <div class="image-container">
+          <img src="./img/up-35.jpg" alt="Wine Dinner" class="square-image" />
         </div>
         <div class="wine-dinner-text">
-            <h2>Wine Dinner</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-            </p>
-            <p>June 13th, 2018 at 7pm</p>
-            <button class="aba-button">Learn More</button>
-
+          <h2>Wine Dinner</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip.
+          </p>
+          <p>June 13th, 2018 at 7pm</p>
+          <button class="aba-button">Learn More</button>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-
-<!-- About Section -->
-<section class="container about">
-  <div class="about-content">
-      <div class="about-text">
+    <!-- About Section -->
+    <section class="container about">
+      <div class="about-content">
+        <div class="about-text">
           <h2>About Aba</h2>
           <p>
-              Aba is a restaurant with a rooftop patio located in Chicago's historic
-              Fulton Market District. This is Chef CJ Jacobson's second restaurant
-              with Lettuce Entertain You, and is an extension of Ēma (mother in
-              Hebrew) in River North. Aba, meaning father in Hebrew, will incorporate
-              Ēma's style of cooking with a larger influence of steak, raw and chilled
-              seafood. The beverage program is crafted by Wine Director Ryan Arnold
-              and Mixologist Liz Pearce and showcases Mediterranean-inspired rare
-              wines and spirits.
+            Aba is a restaurant with a rooftop patio located in Chicago's
+            historic Fulton Market District. This is Chef CJ Jacobson's second
+            restaurant with Lettuce Entertain You, and is an extension of Ēma
+            (mother in Hebrew) in River North. Aba, meaning father in Hebrew,
+            will incorporate Ēma's style of cooking with a larger influence of
+            steak, raw and chilled seafood. The beverage program is crafted by
+            Wine Director Ryan Arnold and Mixologist Liz Pearce and showcases
+            Mediterranean-inspired rare wines and spirits.
           </p>
-      </div>
-      <div class="image-container">
+        </div>
+        <div class="image-container">
           <img src="./img/up-42.jpg" alt="About Aba" class="square-image" />
+        </div>
       </div>
-  </div>
-</section>
+    </section>
 
-   <!-- Footer Section -->
-<section class="footer">
-    <footer>
-      <!-- Container for Hours/Contact/Newsletter and Locations/Phone number -->
-      <div class="footer-container">
-        <!-- Container for Hours, Contact, and Newsletter -->
-        <div class="footer-column">
-          <h3>Hours</h3>
-          <p>Tues - Thurs 12pm - 10pm</p>
-          <p>Fri 12pm - 1am</p>
-          <p>Sat 11am - 1am</p>
-          <p>Sun 10am - 9pm</p>
-          <a href="#"><h3>Contact</h3></a>
-          <a href="#"><h3>Newsletter</h3></a>
+    <!-- Footer Section -->
+    <section class="footer">
+      <footer>
+        <!-- Container for Hours/Contact/Newsletter and Locations/Phone number -->
+        <div class="footer-container">
+          <!-- Container for Hours, Contact, and Newsletter -->
+          <div class="footer-column">
+            <h3>Hours</h3>
+            <p>Tues - Thurs 12pm - 10pm</p>
+            <p>Fri 12pm - 1am</p>
+            <p>Sat 11am - 1am</p>
+            <p>Sun 10am - 9pm</p>
+            <a href="#"><h3>Contact</h3></a>
+            <a href="#"><h3>Newsletter</h3></a>
+          </div>
+
+          <!-- Container for Locations and Phone number -->
+          <div class="footer-column">
+            <h3>Locations</h3>
+            <p>302 N Green Street</p>
+            <p>3rd Floor</p>
+            <p>Chicago, IL 60607</p>
+            <p>773-645-1400</p>
+          </div>
         </div>
-  
-        <!-- Container for Locations and Phone number -->
-        <div class="footer-column">
-          <h3>Locations</h3>
-          <p>302 N Green Street</p>
-          <p>3rd Floor</p>
-          <p>Chicago, IL 60607</p>
-          <p>773-645-1400</p>
-        </div>
-      </div>
-      
-      <!-- Small text bar within the footer -->
-      
-    </footer>
-    <div class="footer-menu">
+
+        <!-- Small text bar within the footer -->
+      </footer>
+      <div class="footer-menu">
         <a href="#">Frequent Diner</a>
         <a href="#">Gift Cards</a>
         <a href="#">Employment</a>
@@ -165,16 +215,9 @@
         <a href="#">Terms of Use</a>
         <a href="#">Privacy Policy</a>
       </div>
-  </section>
-  
-  
-  
-
-  
-  
-  
+    </section>
 
     <script src="./script.js"></script>
     <!-- Add your JavaScript file here -->
-</body>
+  </body>
 </html>
