@@ -33,28 +33,30 @@ body {
 /* Header Styles */
 header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  padding: 20px 30px;
+  padding-left: 100px;
+  padding-top: 20px;
   background-color: transparent;
-  position: relative;
 }
 
 header img {
   max-width: 100px;
   height: auto;
   margin-right: 20px;
+  flex-shrink: 0; /* Prevent the logo from shrinking */
 }
 
 nav {
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
   display: flex;
-  flex-direction: c;
-  align-items: center;
-  text-align: center;
-  position: relative;
+  flex-direction: row;
+  align-items: left;
   gap: 60px;
-  white-space: nowrap;
-  flex-grow: 0.5;
+  padding-right: 50px;
+  padding-left: 50px;
 }
 
 nav h4 {
@@ -62,41 +64,22 @@ nav h4 {
   position: relative;
   text-decoration: none;
   color: #000;
-  margin: 10 10px;
+  white-space: nowrap;
 }
 
 nav h4::before {
   content: "";
   position: absolute;
-  bottom: -2px;
+  bottom: -1px;
   left: 0;
   width: 0;
-  height: 2px;
+  height: 1px;
   background-color: #000;
-  transition: width 0.3s;
+  transition: width 0.4s;
 }
 
 nav h4:hover::before {
   width: 100%;
-}
-
-nav::before,
-nav::after {
-  content: "";
-  height: 1px;
-  background-color: #000;
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  margin: 10px;
-}
-
-nav::before {
-  top: 0;
-}
-
-nav::after {
-  bottom: 0;
 }
 
 /* Container Styles */
@@ -112,6 +95,9 @@ nav::after {
 /* Banner Styles */
 .banner {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   justify-content: space-between;
   align-items: flex-end;
   overflow: hidden;
@@ -119,18 +105,35 @@ nav::after {
 }
 
 .banner-images {
-  width: 120%;
-  height: 120%;
+  width: 100%;
+  height: 500px;
   display: flex;
+  gap: 10px;
   justify-content: center;
   align-items: center;
-  gap: 10px;
 }
 
 .banner img {
   width: 120%;
   height: 120%;
   object-fit: cover;
+}
+
+/* Style for body images */
+.body-image {
+  width: 358px; /* Adjust the width as needed */
+  height: 333px; /* Adjust the height as needed */
+  object-fit: cover; /* This will crop the image to fit the square container */
+  overflow: hidden; /* Hide the overflow to crop the image */
+  position: relative; /* Required for centering */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.body-image img {
+  object-fit: cover; /* Zoom in and maintain aspect ratio */
+  width: 100%; /* Ensure the image covers the container */
+  height: 100%; /* Ensure the image covers the container */
 }
 
 /* Style the form fields to have the same height and width */
@@ -194,7 +197,7 @@ select {
 /* Wine Dinner Section */
 .wine-dinner {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
@@ -206,13 +209,6 @@ select {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-}
-
-/* Style for square images */
-.square-image {
-  width: 300px; /* Adjust the width as needed */
-  height: 300px; /* Adjust the height as needed */
-  object-fit: cover; /* This will crop the image to fit the square container */
 }
 
 .aba-button {
@@ -292,27 +288,62 @@ select {
 }
 /* Define a media query for screens with a maximum width of 768px (typical for mobile devices) */
 @media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  header img {
+    max-width: 100px;
+    height: auto;
+    margin-right: 20px;
+    flex-shrink: 0; /* Prevent the logo from shrinking */
+  }
+
+  nav {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
   /* Reduce the size of the header image for mobile devices */
   header img {
     max-width: 100px; /* Adjust the max-width as needed */
   }
 
-  /* Adjust the size and spacing of the navigation items for mobile devices */
-  nav {
-    flex-direction: row; /* Display the menu items horizontally */
+  
+  .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    overflow: hidden;
+    height: 300px;
+  }
+  
+  .banner-images {
+    width: 100%;
+    height: 500px;
+    display: flex;
     gap: 10px;
+    justify-content: center;
+    align-items: center;
   }
-
-  nav h4 {
-    font-size: small; /* Reduce font size for mobile devices */
+  
+  .body-image {
+    max-width: none;
+    height: auto;
   }
-
-  /* Adjust the banner image size for mobile devices */
-  .banner img {
-    width: 100%; /* Make the banner image full width */
-    height: auto; /* Maintain the aspect ratio */
-  }
-
   /* Reduce the width of the form elements for mobile devices */
   .form-group {
     width: 100%; /* Make form elements full width on mobile */
@@ -321,12 +352,6 @@ select {
   /* Adjust the size of the submit button for mobile devices */
   #submit-reservation {
     width: 100%; /* Make the button full width on mobile */
-  }
-
-  /* Reduce the size of the Wine Dinner image container for mobile devices */
-  .wine-dinner-image-container {
-    width: 100%; /* Make the image container full width on mobile */
-    margin-right: 0; /* Remove right margin on mobile */
   }
 
   /* Reduce the size of the Wine Dinner text for mobile devices */
