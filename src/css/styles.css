@@ -1,3 +1,4 @@
+/* General Styles */
 h1,
 h2,
 h3,
@@ -115,11 +116,6 @@ nav::after {
   align-items: flex-end;
   overflow: hidden;
   height: 300px;
-  background-color: #f0f0f0;
-  background-image: url("../img/banner-image.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom;
 }
 
 .banner-images {
@@ -163,59 +159,7 @@ select {
   padding: 10px; /* Add padding for consistent height and spacing */
 }
 
-
-
 /* Reservation Form Styles */
-/*
-.form-group {
-  font-family: Montserrat;
-  display: flex;
-  align-items: center;
-  width: 200px;
-  margin-bottom: 10px;
-}
-
-
-input[type="date"],
-input[type="number"],
-select {
-  font-family: Montserrat;
-  font-size: smaller;
-  border: 1px solid #ccc;
-  flex: 1; 
-  margin-right: 10px; 
-
-button {
-  padding: 10px 20px;
-  background-color: #123c43;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  flex: 0; 
-}
-
-.reservation-form {
-  display: flex;
-  flex-wrap: wrap; 
-}
-
-.reservation-form button {
-  flex-basis: 100%; 
-  margin-top: 10px; 
-}
-
-.reservation-form button,
-.customer-info-form button {
-  align-self: flex-start;
-}
-
-label,
-select,
-input {
-  width: 100%;
-}
-*/
-
 .group-dining,
 .about,
 .reservation {
@@ -247,6 +191,30 @@ input {
   border-bottom: 1px solid #333;
 }
 
+/* Wine Dinner Section */
+.wine-dinner {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.wine-dinner-content {
+  display: flex;
+  flex-direction: row; /* Change to row */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Style for square images */
+.square-image {
+  width: 300px; /* Adjust the width as needed */
+  height: 300px; /* Adjust the height as needed */
+  object-fit: cover; /* This will crop the image to fit the square container */
+}
+
 .aba-button {
   font-family: Playfair;
   font-weight: 100;
@@ -259,50 +227,6 @@ input {
   cursor: pointer;
 }
 
-.image-container {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.group-dining img,
-.about img,
-.reservation img {
-  max-width: 200px;
-  height: auto;
-}
-
-@media screen and (max-width: 768px) {
-
-
-  .group-dining-text,
-  .about-text,
-  .reservation-text {
-    text-align: center;
-  }
-}
-
-.wine-dinner {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
-
-.wine-dinner-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.wine-dinner img {
-  max-width: 200px;
-  height: auto;
-}
 /* Footer Styles */
 .footer {
   background-image: url("../img/Aba-wood-1.jpg");
@@ -319,10 +243,9 @@ input {
 .footer-container {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: right;
   white-space: nowrap;
   flex: 1;
-  margin-right: 100px; 
 }
 
 /* Style for each column within the footer container */
@@ -366,4 +289,54 @@ input {
 
 .footer-menu a:hover {
   text-decoration: underline;
+}
+/* Define a media query for screens with a maximum width of 768px (typical for mobile devices) */
+@media (max-width: 768px) {
+  /* Reduce the size of the header image for mobile devices */
+  header img {
+    max-width: 100px; /* Adjust the max-width as needed */
+  }
+
+  /* Adjust the size and spacing of the navigation items for mobile devices */
+  nav {
+    flex-direction: row; /* Display the menu items horizontally */
+    gap: 10px;
+  }
+
+  nav h4 {
+    font-size: small; /* Reduce font size for mobile devices */
+  }
+
+  /* Adjust the banner image size for mobile devices */
+  .banner img {
+    width: 100%; /* Make the banner image full width */
+    height: auto; /* Maintain the aspect ratio */
+  }
+
+  /* Reduce the width of the form elements for mobile devices */
+  .form-group {
+    width: 100%; /* Make form elements full width on mobile */
+  }
+
+  /* Adjust the size of the submit button for mobile devices */
+  #submit-reservation {
+    width: 100%; /* Make the button full width on mobile */
+  }
+
+  /* Reduce the size of the Wine Dinner image container for mobile devices */
+  .wine-dinner-image-container {
+    width: 100%; /* Make the image container full width on mobile */
+    margin-right: 0; /* Remove right margin on mobile */
+  }
+
+  /* Reduce the size of the Wine Dinner text for mobile devices */
+  .wine-dinner-text {
+    padding: 10px; /* Reduce padding for mobile */
+  }
+
+  /* Adjust the alignment of the footer columns for mobile devices */
+  .footer-column {
+    text-align: left; /* Align content to the right */
+    margin-right: 0; /* Remove right margin for mobile */
+  }
 }
