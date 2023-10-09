@@ -47,12 +47,12 @@ header {
 header img {
   max-width: 150px;
   height: auto;
-  margin-right: 20px;
+  margin-right: 50px;
   flex-shrink: 0;
 }
 
 nav {
-  font-size: 20px;
+  font-size: 20px;;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   display: flex;
@@ -394,9 +394,9 @@ Might need a smaller breakpoint if we're accounting for old devices */
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 20px; /* Increase the gap */
-    padding-right: 20px; /* Increase padding */
-    padding-left: 20px; /* Increase padding */
+    gap: 20px; 
+    padding-right: 20px; 
+    padding-left: 20px; 
   }
 
   .banner-images {
