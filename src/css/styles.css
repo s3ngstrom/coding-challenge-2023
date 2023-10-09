@@ -123,10 +123,17 @@ nav h4:hover::before {
 }
 
 /* Body image styling */
-.body-image, .body-image-closeup {
+.body-image, {
   width: 340px;
   height: 325px;
   object-fit: cover;
+  overflow: hidden;
+}
+
+body-image-closeup {
+  width: 340px;
+  height: 325px;
+  object-fit: none;
   overflow: hidden;
 }
 
