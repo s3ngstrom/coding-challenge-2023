@@ -78,12 +78,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  /* Validate date */
-  function isValidCalendarDate(date) {
-    const currentDate = new Date();
-    currentDate.setHours(0, 0, 0, 0);
-    return date instanceof Date && !isNaN(date) && date >= currentDate;
-  }
+ /* Validate date */
+function isValidCalendarDate(date) {
+  const currentDate = new Date();
+  currentDate.setHours(0, 0, 0, 0);
+  return date instanceof Date && !isNaN(date) && date >= currentDate;
+}
 
   /* Validate time */
   function isValidReservationTime(time) {

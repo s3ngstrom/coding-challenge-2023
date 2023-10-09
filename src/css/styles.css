@@ -52,6 +52,7 @@ header img {
 }
 
 nav {
+  font-size: 20px;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   display: flex;
@@ -110,6 +111,9 @@ nav h4 {
   justify-content: space-between;
   overflow: hidden;
   height: auto;
+  padding-right: 50px;
+  padding-left: 50px;
+
 }
 
 .banner-images {
@@ -131,6 +135,7 @@ nav h4 {
   height: auto;
   object-fit: cover;
 }
+
 
 /* Body image styling */
 .body-image {
@@ -169,7 +174,7 @@ select {
   font-size: 12px;
   text-align: center;
   width: 180px;
-  padding: 10px;
+  height:34px;
   border-radius: 2px;
   border-style: solid;
   border-width: 1px;
@@ -181,7 +186,7 @@ input[type="date"] {
   font-size: 12px;
   text-align: center;
   width: 180px;
-  height: 34px;
+  height: 32px;
   border-radius: 2px;
   border-style: solid;
   border-width: 1px;
@@ -234,8 +239,6 @@ select {
   border-bottom: 1px solid #333;
   padding-bottom: 40px;
   padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 /* font-size: 0px to remove drop-down arrows AND conceal field labels */
 .reservation-request,
@@ -387,6 +390,7 @@ Might need a smaller breakpoint if we're accounting for old devices */
   }
 
   nav {
+    font-size: 18px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -423,22 +427,12 @@ Might need a smaller breakpoint if we're accounting for old devices */
   input[type="email"],
   input[type="tel"],
   select {
-    font-family: Montserrat, Arial, sans-serif;
-    text-align: center;
     width: 200px;
-    border-radius: 2px;
-    border-style: solid;
-    border-width: 1px;
   }
 
   input[type="date"] {
-    font-family: Montserrat, Arial, sans-serif;
-    text-align: center;
+
     width: 197px;
-    height: 34px;
-    border-radius: 2px;
-    border-style: solid;
-    border-width: 1px;
   }
 
   select {
@@ -471,11 +465,6 @@ Might need a smaller breakpoint if we're accounting for old devices */
 
   nav {
     font-size: 12px;
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #333;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     gap: 10px;
     padding-right: 10px;
     padding-left: 10px;
@@ -540,7 +529,7 @@ Might need a smaller breakpoint if we're accounting for old devices */
     font-family: Montserrat, Arial, sans-serif;
     text-align: center;
     width: 197px;
-    height: 34px;
+    height: 33px;
     border-radius: 2px;
     border-style: solid;
     border-width: 1px;
@@ -570,15 +559,21 @@ Might need a smaller breakpoint if we're accounting for old devices */
     max-width: 60px;
   }
   
+  
   .banner-images {
     display: flex;
     flex-direction: row;
     max-height: 150px;
   }
  
-  .footer-column {
-    text-align: left;
-    width: 100%;
-    padding: 20px;
-    margin-left:
+  .footer-column h3 {
+    margin-bottom: 0px;
+    font-size: small;
   }
+  .footer-column p {
+    font-size: 11px;
+  }
+
+}
+  
+    
