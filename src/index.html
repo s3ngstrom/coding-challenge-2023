@@ -23,21 +23,29 @@
     <!-- Banner Image Section -->
     <section class="container banner">
       <div class="banner-images">
-        <img src="./img/up-47.jpg" alt="Banner Image 1" class="banner-image-left" />
-        <img src="./img/Aba_VillageSalad.jpg" alt="Banner Image 2" class="banner-image-right"/>
+        <img
+          src="./img/up-47.jpg"
+          alt="Banner Image 1"
+          class="banner-image-left"
+        />
+        <img
+          src="./img/Aba_VillageSalad.jpg"
+          alt="Banner Image 2"
+          class="banner-image-right"
+        />
       </div>
     </section>
 
     <!-- Reservation Form Section -->
     <section class="container reservation">
-      
       <div class="reservation-content">
         <h2>Make a Reservation</h2>
-
         <div class="reservation-request">
           <form action="reservation.php" method="POST" id="reservation-form">
+            <!-- Label and input for reservation date -->
             <div class="form-group">
-              <input 
+              <label for="reservation-date">Reservation Date:</label>
+              <input
                 type="date"
                 id="reservation-date"
                 name="reservation-date"
@@ -45,7 +53,9 @@
               />
             </div>
 
+            <!-- Label and select for reservation time -->
             <div class="form-group">
+              <label for="reservation-time">Reservation Time:</label>
               <select
                 id="reservation-time"
                 name="reservation-time"
@@ -54,7 +64,9 @@
               ></select>
             </div>
 
+            <!-- Label and select for party size -->
             <div class="form-group">
+              <label for="party-size">Party Size:</label>
               <select
                 id="party-size"
                 name="party-size"
@@ -67,12 +79,14 @@
 
             <button type="button" id="submit-request">Find a Table</button>
           </form>
-          </div>
+        </div>
 
-          <!-- Customer Information Form -->
-        <form id="customer-info-form" style="display: none"> 
-          <div class="reservation-info">  
-          <div class="form-group">
+        <!-- Customer Information Form -->
+        <form id="customer-info-form" style="display: none">
+          <div class="reservation-info">
+            <!-- Label and input for customer name -->
+            <div class="form-group">
+              <label for="customer-name">Name:</label>
               <input
                 type="text"
                 id="customer-name"
@@ -81,7 +95,10 @@
                 required
               />
             </div>
+
+            <!-- Label and input for customer phone -->
             <div class="form-group">
+              <label for="customer-phone">Phone:</label>
               <input
                 type="tel"
                 id="customer-phone"
@@ -90,7 +107,10 @@
                 required
               />
             </div>
+
+            <!-- Label and input for customer email -->
             <div class="form-group">
+              <label for="customer-email">Email:</label>
               <input
                 type="email"
                 id="customer-email"
@@ -99,21 +119,22 @@
                 required
               />
             </div>
-            <button type="button" id="submit-customer-info">Submit</button>
-          </form>
-</div>
-          <!-- Success Message -->
-          <div id="success-message" style="display: none">
-            <p>
-              Reservation successfully submitted. We're looking forward to
-              seeing you!
-            </p>
-          </div>
 
-          <!-- Validation Error Message -->
-          <div id="validation-error" style="display: none">
-            <p>Please fill out all fields.</p>
+            <button type="button" id="submit-customer-info">Submit</button>
           </div>
+        </form>
+
+        <!-- Success Message -->
+        <div id="success-message" style="display: none">
+          <p>
+            Reservation successfully submitted. We're looking forward to seeing
+            you!
+          </p>
+        </div>
+
+        <!-- Validation Error Message -->
+        <div id="validation-error" style="display: none">
+          <p>Please fill out all fields.</p>
         </div>
       </div>
     </section>
@@ -143,30 +164,29 @@
       </div>
     </section>
 
-<!-- Wine Dinner Section -->
-<section class="container wine-dinner">
-  <div class="wine-dinner-content">
-    <div class="image-container">
-      <img
-        src="./img/up-35.jpg"
-        alt="Group Dining at Aba"
-        class="body-image-closeup"
-      />
-    </div>
-    <div class="wine-dinner-text">
-      <h2>Wine Dinner</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip.
-      </p>
-      <p>June 13th, 2018 at 7pm</p>
-      <button class="aba-button">Learn More</button>
-    </div>
-  </div>
-</section>
-
+    <!-- Wine Dinner Section -->
+    <section class="container wine-dinner">
+      <div class="wine-dinner-content">
+        <div class="image-container">
+          <img
+            src="./img/up-35.jpg"
+            alt="Group Dining at Aba"
+            class="body-image-closeup"
+          />
+        </div>
+        <div class="wine-dinner-text">
+          <h2>Wine Dinner</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip.
+          </p>
+          <p>June 13th, 2018 at 7pm</p>
+          <button class="aba-button">Learn More</button>
+        </div>
+      </div>
+    </section>
 
     <!-- About Section -->
     <section class="container about">
