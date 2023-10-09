@@ -121,14 +121,10 @@ nav h4:hover::before {
 
 /* Style for body images */
 .body-image {
-  width: 358px; /* Adjust the width as needed */
-  height: 333px; /* Adjust the height as needed */
+  width: 340px; /* Adjust the width as needed */
+  height: 325px; /* Adjust the height as needed */
   object-fit: cover; /* This will crop the image to fit the square container */
   overflow: hidden; /* Hide the overflow to crop the image */
-  position: relative; /* Required for centering */
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .body-image img {
   object-fit: cover; /* Zoom in and maintain aspect ratio */
@@ -139,9 +135,10 @@ nav h4:hover::before {
 /* Style the form fields to have the same height and width */
 .form-group {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 0%;
   width: 200px; /* Set a fixed width for all form elements */
 }
+
 
 /* Style the input fields */
 input[type="date"],
@@ -149,17 +146,30 @@ input[type="text"],
 input[type="tel"],
 input[type="email"],
 select {
+  font-family: Montserrat;
+  font-size: 10px;
+  text-align: center;
   width: 100%; /* Make input fields and selects expand to fill the form-group width */
   padding: 10px; /* Add padding for consistent height and spacing */
-  margin: 0; /* Remove default margin */
+}
+
+input[type="date"] {
+  width: 176px;
+  height: 12px;
+
 }
 
 /* Style the button */
-#submit-reservation {
-  display: inline-block;
-  margin-top: 10px;
-  width: 200px; /* Set a fixed width for the button */
-  padding: 10px; /* Add padding for consistent height and spacing */
+#submit-request {
+  font-family: Playfair;
+  font-weight: 100;
+  text-transform: uppercase;
+  padding: 10px 60px;
+  border-radius: 2px;
+  background-color: #123c43;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
 /* Reservation Form Styles */
@@ -167,15 +177,15 @@ select {
 .about,
 .reservation {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  
 }
 
 .group-dining-content,
-.about-content,
-.reservation-content {
+.about-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -183,15 +193,30 @@ select {
   width: 100%;
 }
 
+
 .group-dining-text,
 .wine-dinner-text,
-.about-text,
-.reservation-text {
+.about-text {
   padding: 20px;
   text-align: center;
   width: 100%;
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
+}
+
+.reservation-text {
+  font-size: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}.reservation-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  padding-bottom: 50px;
 }
 
 /* Wine Dinner Section */
@@ -214,9 +239,8 @@ select {
 .aba-button {
   font-family: Playfair;
   font-weight: 100;
-  font-size: small;
   text-transform: uppercase;
-  padding: 10px 20px;
+  padding: 10px 60px;
   background-color: #123c43;
   color: #fff;
   border: none;
@@ -225,7 +249,7 @@ select {
 
 /* Footer Styles */
 .footer {
-  background-image: url("../img/Aba-wood-1.jpg");
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../img/Aba-wood-1.jpg");
   background-size: cover;
   color: #fff;
   padding: 20px;
@@ -253,8 +277,7 @@ select {
 }
 
 .footer-column h3 {
-  font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 
 .footer-column a {
@@ -270,7 +293,7 @@ select {
 .footer-menu {
   font-family: Playfair;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 100;
   color: #fff;
   text-align: center;
   width: 100%;
@@ -349,8 +372,20 @@ select {
     width: 100%; /* Make form elements full width on mobile */
   }
 
+  .form-group {
+    display:flex;
+    flex-direction: column;
+    width: 300px; /* Set a fixed width for all form elements */
+  }
+
+  input[type="date"] {
+    width: 276px;
+    height: 12px;
+  
+  }
+
   /* Adjust the size of the submit button for mobile devices */
-  #submit-reservation {
+  #submit-request {
     width: 100%; /* Make the button full width on mobile */
   }
 

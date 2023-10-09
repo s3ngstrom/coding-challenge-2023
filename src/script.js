@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const successMessage = document.getElementById("success-message");
   const validationError = document.getElementById("validation-error");
 
-  const submitReservationButton = document.getElementById("submit-reservation");
+  const submitRequestButton = document.getElementById("submit-request");
   const submitCustomerInfoButton = document.getElementById(
     "submit-customer-info"
   );
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   //  Hide the initial reservation form and show the date/time/size form
-  submitReservationButton.addEventListener("click", function (e) {
+  submitRequestButton.addEventListener("click", function (e) {
     e.preventDefault();
 
     // Hide the error message
