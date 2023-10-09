@@ -130,7 +130,7 @@ nav h4:hover::before {
   overflow: hidden;
 }
 
-body-image-closeup {
+.body-image-closeup {
   width: 340px;
   height: 325px;
   object-fit: none;
