@@ -1,6 +1,7 @@
 /* General Styles */
 body {
-  font-family: Playfair;
+  font-family: Playfair, Cambria, Cochin, Georgia, Times, "Times New Roman",
+    serif;
 }
 
 h1,
@@ -51,8 +52,8 @@ header img {
 }
 
 nav {
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
   display: flex;
   flex-direction: row;
   align-items: left;
@@ -69,6 +70,7 @@ nav h4 {
   white-space: nowrap;
 }
 
+/* Adding the underline animation to indicate visually when a link is selected */
 nav h4::before {
   content: "";
   position: absolute;
@@ -84,6 +86,14 @@ nav h4:hover::before {
   width: 100%;
 }
 
+nav h4 {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  white-space: nowrap;
+}
+
 /* Container Styles */
 .container {
   display: flex;
@@ -94,35 +104,35 @@ nav h4:hover::before {
   margin: 10px;
 }
 
-/* Banner image formatting */
-
+/* Banner styling */
 .banner {
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  height: auto; /* Set the height to auto to allow images to scale properly */
+  height: auto;
 }
 
 .banner-images {
-  display: flex; /* Display images side by side */
-  gap: 20px; /* Add some gap between the images */
-  max-height: 575px; /* Set a max height for the banner */
+  display: flex;
+  gap: 20px;
+  max-height: 575px;
 }
 
+/* Banner image styling */
 .banner-image-left {
-  max-width: 40%; /* Left image takes up 40% of the available width */
-  height: auto; /* Allow image to scale proportionally */
-  object-fit: none; /* No object fitting for left image */
-  object-position: 10px px;
+  max-width: 40%;
+  height: auto;
+  object-fit: none;
+  object-position: 35% 90%;
 }
 
 .banner-image-right {
-  max-width: 60%; /* Right image takes up 60% of the available width */
-  height: auto; /* Allow image to scale proportionally */
-  object-fit: cover; /* Maintain aspect ratio and cover the container for right image */
+  max-width: 60%;
+  height: auto;
+  object-fit: cover;
 }
 
-/* Style for body images */
+/* Body image styling */
 .body-image {
   width: 340px;
   height: 325px;
@@ -145,7 +155,7 @@ nav h4:hover::before {
   height: 100%;
 }
 
-/* Style the form fields */
+/* Reservation form styling */
 .form-group {
   display: inline-block;
   margin-right: 0%;
@@ -156,7 +166,7 @@ input[type="email"],
 input[type="tel"],
 select {
   font-family: Montserrat, Arial, sans-serif;
-  font-size: 10px;
+  font-size: 12px;
   text-align: center;
   width: 180px;
   padding: 10px;
@@ -165,12 +175,13 @@ select {
   border-width: 1px;
 }
 
+/* Date field is stylistically finnicky - research a better solution to keeping the width in line with other fields */
 input[type="date"] {
   font-family: Montserrat, Arial, sans-serif;
-  font-size: 10px;
+  font-size: 12px;
   text-align: center;
   width: 180px;
-  height: 32px;
+  height: 34px;
   border-radius: 2px;
   border-style: solid;
   border-width: 1px;
@@ -180,21 +191,21 @@ select {
   appearance: none;
 }
 
-/* Style the button */
+/* Form button styling (Must be distinct from other page button styling) */
 #submit-request,
 #submit-customer-info {
   font-family: "Montserrat";
-  font-weight: lighter;
-  font-size: 11px;
+  font-size: 12px;
   border-radius: 2px;
   background-color: #123c43;
   color: #fff;
   border: none;
   cursor: pointer;
   width: 200px;
-  height: 34px;
+  height: 36px;
 }
 
+/* Styling additional body content */
 .group-dining,
 .about {
   display: flex;
@@ -223,12 +234,11 @@ select {
   border-bottom: 1px solid #333;
   padding-bottom: 40px;
   padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
-
-.reservation-request {
-  font-size: 0px;
-}
-
+/* font-size: 0px to remove drop-down arrows AND conceal field labels */
+.reservation-request,
 .reservation-info {
   font-size: 0px;
 }
@@ -255,7 +265,7 @@ select {
   align-items: center;
   width: 100%;
 }
-
+/* Button styling to be used in body */
 .aba-button {
   font-family: Playfair;
   font-weight: 100;
@@ -289,7 +299,7 @@ select {
   flex: 1;
 }
 
-/* Style for each column within the footer container */
+/* Style text in columns in footer*/
 .footer-column {
   text-align: left;
   width: 100%;
@@ -307,6 +317,7 @@ select {
   position: relative;
 }
 
+/* Adding Navbar menu hover effect to Footer links*/
 .footer-column a::before {
   content: "";
   position: absolute;
@@ -327,13 +338,11 @@ select {
 }
 
 .footer-menu {
-  font-family: Playfair;
   text-transform: uppercase;
-  font-weight: 100;
   color: #fff;
   text-align: center;
   width: 100%;
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 .footer-menu a {
@@ -358,14 +367,16 @@ select {
   width: 100%;
 }
 
-/* Define a media query for screens with a maximum width of 768px (typical for mobile devices) */
-@media (max-width: 768px) {
-  header {
+/* Styling for mobile @ 768px 
+Might need a smaller breakpoint if we're accounting for old devices */
+@media (max-width: 1024px) {
+  .container {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
     align-items: center;
-    padding: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+    margin: 10px;
   }
 
   header img {
@@ -376,61 +387,36 @@ select {
   }
 
   nav {
-    font-size: 10px;
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #333;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
-    padding-right: 10px;
-    padding-left: 10px;
+    gap: 20px; /* Increase the gap */
+    padding-right: 20px; /* Increase padding */
+    padding-left: 20px; /* Increase padding */
   }
 
-  header img {
-    max-width: 100px;
-  }
   .banner-images {
-    display: flex; 
+    display: flex;
     flex-direction: row;
     justify-content: center;
-    max-height: 575px; 
+    max-height: 575px;
   }
 
   .banner-image-left {
-    max-width: 40%; 
-    height: auto; 
-    object-fit: cover; 
+    max-width: 40%;
+    height: auto;
+    object-fit: cover;
   }
 
   .banner-image-right {
-    max-width: 60%; 
-    height: auto; 
-    object-fit: none; 
-  }
-
-  .body-image,
-  .body-image-closeup {
-    width: 400px;
-    height: 100px;
-  }
-
-  .group-dining-content,
-  .wine-dinner-content,
-  .about-content {
-    flex-direction: column; /* Stack content vertically on mobile */
-  }
-
-  .group-dining-content .image-container,
-  .wine-dinner-content .image-container,
-  .about-content .image-container {
-    order: 2; 
-    margin-top: 55px; 
+    max-width: 60%;
+    height: auto;
+    object-fit: cover;
   }
 
   .form-group {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
 
   input[type="text"],
@@ -438,7 +424,6 @@ select {
   input[type="tel"],
   select {
     font-family: Montserrat, Arial, sans-serif;
-    font-size: 10px;
     text-align: center;
     width: 200px;
     border-radius: 2px;
@@ -448,7 +433,6 @@ select {
 
   input[type="date"] {
     font-family: Montserrat, Arial, sans-serif;
-    font-size: 10px;
     text-align: center;
     width: 197px;
     height: 34px;
@@ -474,3 +458,127 @@ select {
     margin-right: 0;
   }
 }
+
+/* Tablet/larger mobile devices */
+@media (max-width: 768px) {
+
+  header img {
+    max-width: 100px;
+    height: auto;
+    margin-right: 20px;
+    flex-shrink: 0;
+  }
+
+  nav {
+    font-size: 12px;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .banner-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-height: 575px;
+  }
+
+  .banner-image-left {
+    max-width: 40%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .banner-image-right {
+    max-width: 60%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .body-image,
+  .body-image-closeup {
+    width: 400px;
+    height: 100px;
+  }
+
+  .group-dining-content,
+  .wine-dinner-content,
+  .about-content {
+    flex-direction: column-reverse;
+  }
+
+  .group-dining-content .image-container,
+  .wine-dinner-content .image-container,
+  .about-content .image-container {
+    order: 1;
+    margin-bottom: 45px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select {
+    font-family: Montserrat, Arial, sans-serif;
+    text-align: center;
+    width: 200px;
+    border-radius: 2px;
+    border-style: solid;
+    border-width: 1px;
+  }
+
+  input[type="date"] {
+    font-family: Montserrat, Arial, sans-serif;
+    text-align: center;
+    width: 197px;
+    height: 34px;
+    border-radius: 2px;
+    border-style: solid;
+    border-width: 1px;
+  }
+
+  select {
+    appearance: none;
+  }
+
+  #submit-request {
+    width: 100%;
+  }
+
+  #submit-customer-info {
+    width: 100%;
+  }
+
+  .footer-column {
+    text-align: left;
+    margin-right: 0;
+  }
+}
+
+/* VERY small screens - old devices, probably, but they're still in use */
+@media (max-width: 389px) {
+  header img {
+    max-width: 60px;
+  }
+  
+  .banner-images {
+    display: flex;
+    flex-direction: row;
+    max-height: 150px;
+  }
+ 
+  .footer-column {
+    text-align: left;
+    width: 100%;
+    padding: 20px;
+    margin-left:
+  }
