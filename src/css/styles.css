@@ -151,6 +151,7 @@ input[type="text"], input[type="email"], input[type="tel"], select, input[type="
   border-radius: 2px;
   border-style: solid;
   border-width: 1px;
+  background-color: white;
 }
 
 input[type="text"], input[type="email"], input[type="tel"], select {
@@ -417,7 +418,7 @@ Might need a smaller breakpoint if we're accounting for old devices */
   }
 }
 
-/* Tablet/larger mobile devices */
+/* phones/average mobile devices */
 @media (max-width: 768px) {
   header img {
     max-width: 100px;
