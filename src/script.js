@@ -42,7 +42,6 @@ function generateTimeOptions() {
 }
 generateTimeOptions();
 
-
 /* Reservation form listener and handler*/
 document.addEventListener("DOMContentLoaded", function () {
   const reservationForm = document.getElementById("reservation-form");
@@ -78,12 +77,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
- /* Validate date */
-function isValidCalendarDate(date) {
-  const currentDate = new Date();
-  currentDate.setHours(0, 0, 0, 0);
-  return date instanceof Date && !isNaN(date) && date >= currentDate;
-}
+  /* Validate date */
+  function isValidCalendarDate(date) {
+    const currentDate = new Date();
+    currentDate.setHours(0, 0, 0, 0);
+    return date instanceof Date && !isNaN(date) && date >= currentDate;
+  }
 
   /* Validate time */
   function isValidReservationTime(time) {
@@ -95,12 +94,25 @@ function isValidCalendarDate(date) {
     return partySize !== "";
   }
 
+  /* Validate phone is numeric */
+  function isValidPhoneNumber(phone) {
+    const phonePattern = /^\d+$/;
+    return phonePattern.test(phone);
+  }
+
+  /* Validation function for email address */
+  function isValidEmailAddress(email) {
+    const emailPattern = /^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
+    return emailPattern.test(email);
+  }
+
   submitCustomerInfoButton.addEventListener("click", function (e) {
     e.preventDefault();
     let name = document.getElementById("customer-name").value;
     let phone = document.getElementById("customer-phone").value;
     let email = document.getElementById("customer-email").value;
-    if (name && phone && email) {
+
+    if (name && isValidPhoneNumber(phone) && isValidEmailAddress(email)) {
       customerInfoForm.style.display = "none";
       validationError.style.display = "none";
       successMessage.style.display = "block";
