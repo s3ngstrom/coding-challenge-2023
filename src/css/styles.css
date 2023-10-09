@@ -63,7 +63,6 @@ nav h4 {
   position: relative;
   text-decoration: none;
   color: #000;
-  white-space: nowrap;
 }
 
 /* Adding the underline animation to indicate visually when a link is selected */
@@ -200,7 +199,7 @@ select {
 
 .group-dining-text, .wine-dinner-text, .about-text, .reservation-content {
   text-align: center;
-  width: 100%;
+  width: 90%;
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
   padding-bottom: 40px;
@@ -267,7 +266,6 @@ select {
   display: flex;
   flex-direction: row;
   align-items: right;
-  white-space: nowrap;
   flex: 1;
 }
 
@@ -340,7 +338,7 @@ select {
   width: 100%;
 }
 
-/* Styling for mobile @ 768px 
+/* Styling for larger mobile/tablet @ 1024px 
 Might need a smaller breakpoint if we're accounting for old devices */
 @media (max-width: 1024px) {
   .container {
