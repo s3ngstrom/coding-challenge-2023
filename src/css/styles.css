@@ -201,6 +201,9 @@ select {
   border-bottom: 1px solid #333;
   padding-bottom: 40px;
   padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+
 }
 
 /* font-size: 0px to remove drop-down arrows AND conceal field labels */
