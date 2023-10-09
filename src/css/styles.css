@@ -1,13 +1,9 @@
 /* General Styles */
 body {
-  font-family: Playfair, Cambria, Cochin, Georgia, Times, "Times New Roman",
-    serif;
+  font-family: Playfair, Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
   text-transform: uppercase;
   font-weight: lighter;
 }
@@ -21,8 +17,7 @@ p {
   font-size: small;
 }
 
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -52,7 +47,7 @@ header img {
 }
 
 nav {
-  font-size: 20px;;
+  font-size: 20px;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   display: flex;
@@ -87,14 +82,6 @@ nav h4:hover::before {
   width: 100%;
 }
 
-nav h4 {
-  display: inline-block;
-  position: relative;
-  text-decoration: none;
-  color: #000;
-  white-space: nowrap;
-}
-
 /* Container Styles */
 .container {
   display: flex;
@@ -113,7 +100,6 @@ nav h4 {
   height: auto;
   padding-right: 50px;
   padding-left: 50px;
-
 }
 
 .banner-images {
@@ -136,26 +122,15 @@ nav h4 {
   object-fit: cover;
 }
 
-
 /* Body image styling */
-.body-image {
+.body-image, .body-image-closeup {
   width: 340px;
   height: 325px;
   object-fit: cover;
   overflow: hidden;
 }
-.body-image img {
-  width: 100%;
-  height: 100%;
-}
 
-.body-image-closeup {
-  width: 340px;
-  height: 325px;
-  object-fit: none;
-  overflow: hidden;
-}
-.body-image-closeup img {
+.body-image img, .body-image-closeup img {
   width: 100%;
   height: 100%;
 }
@@ -166,30 +141,23 @@ nav h4 {
   margin-right: 0%;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-select {
+input[type="text"], input[type="email"], input[type="tel"], select, input[type="date"] {
   font-family: Montserrat, Arial, sans-serif;
   font-size: 12px;
   text-align: center;
-  width: 180px;
-  height:34px;
   border-radius: 2px;
   border-style: solid;
   border-width: 1px;
 }
 
-/* Date field is stylistically finnicky - research a better solution to keeping the width in line with other fields */
+input[type="text"], input[type="email"], input[type="tel"], select {
+  width: 180px;
+  height: 34px;
+}
+
 input[type="date"] {
-  font-family: Montserrat, Arial, sans-serif;
-  font-size: 12px;
-  text-align: center;
   width: 180px;
   height: 32px;
-  border-radius: 2px;
-  border-style: solid;
-  border-width: 1px;
 }
 
 select {
@@ -197,8 +165,7 @@ select {
 }
 
 /* Form button styling (Must be distinct from other page button styling) */
-#submit-request,
-#submit-customer-info {
+#submit-request, #submit-customer-info {
   font-family: "Montserrat";
   font-size: 12px;
   border-radius: 2px;
@@ -211,8 +178,7 @@ select {
 }
 
 /* Styling additional body content */
-.group-dining,
-.about {
+.group-dining, .about {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -220,8 +186,7 @@ select {
   padding: 20px;
 }
 
-.group-dining-content,
-.about-content {
+.group-dining-content, .about-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -229,10 +194,7 @@ select {
   width: 100%;
 }
 
-.group-dining-text,
-.wine-dinner-text,
-.about-text,
-.reservation-content {
+.group-dining-text, .wine-dinner-text, .about-text, .reservation-content {
   text-align: center;
   width: 100%;
   border-top: 1px solid #333;
@@ -240,9 +202,9 @@ select {
   padding-bottom: 40px;
   padding-top: 20px;
 }
+
 /* font-size: 0px to remove drop-down arrows AND conceal field labels */
-.reservation-request,
-.reservation-info {
+.reservation-request, .reservation-info {
   font-size: 0px;
 }
 
@@ -268,6 +230,7 @@ select {
   align-items: center;
   width: 100%;
 }
+
 /* Button styling to be used in body */
 .aba-button {
   font-family: Playfair;
@@ -282,8 +245,7 @@ select {
 
 /* Footer Styles */
 .footer {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../img/Aba-wood-1.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/Aba-wood-1.jpg");
   background-size: cover;
   color: #fff;
   padding: 20px;
@@ -331,6 +293,7 @@ select {
   background-color: #ffffff;
   transition: width 0.4s;
 }
+
 .footer-column a:hover::before {
   width: 100%;
 }
@@ -423,15 +386,11 @@ Might need a smaller breakpoint if we're accounting for old devices */
     flex-direction: row;
   }
 
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  select {
+  input[type="text"], input[type="email"], input[type="tel"], select {
     width: 200px;
   }
 
   input[type="date"] {
-
     width: 197px;
   }
 
@@ -455,7 +414,6 @@ Might need a smaller breakpoint if we're accounting for old devices */
 
 /* Tablet/larger mobile devices */
 @media (max-width: 768px) {
-
   header img {
     max-width: 100px;
     height: auto;
@@ -489,21 +447,16 @@ Might need a smaller breakpoint if we're accounting for old devices */
     object-fit: cover;
   }
 
-  .body-image,
-  .body-image-closeup {
+  .body-image, .body-image-closeup {
     width: 400px;
     height: 100px;
   }
 
-  .group-dining-content,
-  .wine-dinner-content,
-  .about-content {
+  .group-dining-content, .wine-dinner-content, .about-content {
     flex-direction: column-reverse;
   }
 
-  .group-dining-content .image-container,
-  .wine-dinner-content .image-container,
-  .about-content .image-container {
+  .group-dining-content .image-container, .wine-dinner-content .image-container, .about-content .image-container {
     order: 1;
     margin-bottom: 45px;
   }
@@ -513,10 +466,7 @@ Might need a smaller breakpoint if we're accounting for old devices */
     flex-direction: column;
   }
 
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  select {
+  input[type="text"], input[type="email"], input[type="tel"], select {
     font-family: Montserrat, Arial, sans-serif;
     text-align: center;
     width: 200px;
@@ -559,7 +509,6 @@ Might need a smaller breakpoint if we're accounting for old devices */
     max-width: 60px;
   }
   
-  
   .banner-images {
     display: flex;
     flex-direction: row;
@@ -573,7 +522,4 @@ Might need a smaller breakpoint if we're accounting for old devices */
   .footer-column p {
     font-size: 11px;
   }
-
 }
-  
-    
