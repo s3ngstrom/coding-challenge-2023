@@ -1,9 +1,12 @@
 /* General Styles */
+body {
+  font-family: Playfair;
+}
+
 h1,
 h2,
 h3,
 h4 {
-  font-family: Playfair;
   text-transform: uppercase;
   font-weight: lighter;
 }
@@ -13,7 +16,7 @@ h4 {
 }
 
 p {
-  font-family: Montserrat;
+  font-family: Montserrat, Arial, sans-serif;
   font-size: small;
 }
 
@@ -45,7 +48,7 @@ header img {
   max-width: 100px;
   height: auto;
   margin-right: 20px;
-  flex-shrink: 0; /* Prevent the logo from shrinking */
+  flex-shrink: 0;
 }
 
 nav {
@@ -70,11 +73,11 @@ nav h4 {
 nav h4::before {
   content: "";
   position: absolute;
-  bottom: -1px;
+  bottom: -3px;
   left: 0;
   width: 0;
-  height: 1px;
-  background-color: #000;
+  height: 3px;
+  background-color: #4C4944;
   transition: width 0.4s;
 }
 
@@ -121,65 +124,72 @@ nav h4:hover::before {
 
 /* Style for body images */
 .body-image {
-  width: 340px; /* Adjust the width as needed */
-  height: 325px; /* Adjust the height as needed */
-  object-fit: cover; /* This will crop the image to fit the square container */
-  overflow: hidden; /* Hide the overflow to crop the image */
+  width: 340px;
+  height: 325px;
+  object-fit: cover;
+  overflow: hidden;
 }
 .body-image img {
-  object-fit: cover; /* Zoom in and maintain aspect ratio */
-  width: 100%; /* Ensure the image covers the container */
-  height: 100%; /* Ensure the image covers the container */
+  width: 100%;
+  height: 100%;
 }
 
-/* Style the form fields to have the same height and width */
+.body-image-closeup {
+  width: 340px;
+  height: 325px;
+  object-fit: none;
+  overflow: hidden;
+}
+.body-image-closeup img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Style the form fields */
 .form-group {
   display: inline-block;
   margin-right: 0%;
-  width: 200px; /* Set a fixed width for all form elements */
 }
 
-
-/* Style the input fields */
 input[type="date"],
 input[type="text"],
-input[type="tel"],
+input[type="text"],
 input[type="email"],
+input[type="tel"],
 select {
-  font-family: Montserrat;
+  font-family: Montserrat, Arial, sans-serif;
   font-size: 10px;
   text-align: center;
   border-radius: ;
-  width: 100%; /* Make input fields and selects expand to fill the form-group width */
-  padding: 10px; /* Add padding for consistent height and spacing */
+  width: 150px;
+  padding: 10px;
 }
 
 input[type="date"] {
-  width: 176px;
+  width: 130px;
   height: 10px;
-
 }
 
-select {
-  	appearance: none;
 
+select {
+  appearance: none;
 }
 
 /* Style the button */
-#submit-request {
-  font-family: Playfair;
-  font-weight: 100;
-  text-transform: uppercase;
+#submit-request,
+#submit-customer-info {
+  font-family: "Montserrat";
+  font-weight: lighter;
+  font-size: 11px;
   border-radius: 2px;
   background-color: #123c43;
   color: #fff;
   border: none;
   cursor: pointer;
   width: 200px;
-  height: 34px ;
+  height: 34px;
 }
 
-/* Reservation Form Styles */
 .group-dining,
 .about,
 .reservation {
@@ -188,7 +198,6 @@ select {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  
 }
 
 .group-dining-content,
@@ -200,7 +209,6 @@ select {
   width: 100%;
 }
 
-
 .group-dining-text,
 .wine-dinner-text,
 .about-text {
@@ -211,13 +219,15 @@ select {
   border-bottom: 1px solid #333;
 }
 
-.reservation-text {
+.reservation-request {
   font-size: 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-}.reservation-content {
+}
+
+.reservation-info {
+  font-size: 0px;
+}
+
+.reservation-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -237,7 +247,7 @@ select {
 
 .wine-dinner-content {
   display: flex;
-  flex-direction: row; /* Change to row */
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -256,7 +266,8 @@ select {
 
 /* Footer Styles */
 .footer {
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../img/Aba-wood-1.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/Aba-wood-1.jpg");
   background-size: cover;
   color: #fff;
   padding: 20px;
@@ -316,6 +327,7 @@ select {
 .footer-menu a:hover {
   text-decoration: underline;
 }
+
 /* Define a media query for screens with a maximum width of 768px (typical for mobile devices) */
 @media (max-width: 768px) {
   header {
@@ -330,7 +342,7 @@ select {
     max-width: 100px;
     height: auto;
     margin-right: 20px;
-    flex-shrink: 0; /* Prevent the logo from shrinking */
+    flex-shrink: 0;
   }
 
   nav {
@@ -346,10 +358,9 @@ select {
 
   /* Reduce the size of the header image for mobile devices */
   header img {
-    max-width: 100px; /* Adjust the max-width as needed */
+    max-width: 100px;
   }
 
-  
   .banner {
     display: flex;
     justify-content: center;
@@ -360,7 +371,7 @@ select {
     overflow: hidden;
     height: 300px;
   }
-  
+
   .banner-images {
     width: 100%;
     height: 500px;
@@ -369,41 +380,36 @@ select {
     justify-content: center;
     align-items: center;
   }
-  
+
   .body-image {
     max-width: none;
     height: auto;
   }
-  /* Reduce the width of the form elements for mobile devices */
-  .form-group {
-    width: 100%; /* Make form elements full width on mobile */
-  }
 
   .form-group {
-    display:flex;
+    display: flex;
     flex-direction: column;
-    width: 300px; /* Set a fixed width for all form elements */
+    width: 300px;
   }
 
   input[type="date"] {
     width: 276px;
     height: 12px;
-  
   }
 
   /* Adjust the size of the submit button for mobile devices */
   #submit-request {
-    width: 100%; /* Make the button full width on mobile */
+    width: 100%;
   }
 
   /* Reduce the size of the Wine Dinner text for mobile devices */
   .wine-dinner-text {
-    padding: 10px; /* Reduce padding for mobile */
+    padding: 10px;
   }
 
   /* Adjust the alignment of the footer columns for mobile devices */
   .footer-column {
-    text-align: left; /* Align content to the right */
-    margin-right: 0; /* Remove right margin for mobile */
+    text-align: left;
+    margin-right: 0;
   }
 }

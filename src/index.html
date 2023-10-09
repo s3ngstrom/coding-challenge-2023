@@ -34,7 +34,7 @@
       <div class="reservation-content">
         <h2>Make a Reservation</h2>
 
-        <div class="reservation-text">
+        <div class="reservation-request">
           <form action="reservation.php" method="POST" id="reservation-form">
             <div class="form-group">
               <input 
@@ -50,6 +50,7 @@
                 id="reservation-time"
                 name="reservation-time"
                 placeholder="Reservation Time"
+                required
               ></select>
             </div>
 
@@ -58,6 +59,7 @@
                 id="party-size"
                 name="party-size"
                 placeholder="Party Size"
+                required
               >
                 <!-- Options for party size will be generated dynamically using JavaScript -->
               </select>
@@ -65,10 +67,12 @@
 
             <button type="button" id="submit-request">Find a Table</button>
           </form>
+          </div>
 
           <!-- Customer Information Form -->
-          <form id="customer-info-form" style="display: none">
-            <div class="form-group">
+        <form id="customer-info-form" style="display: none"> 
+          <div class="reservation-info">  
+          <div class="form-group">
               <input
                 type="text"
                 id="customer-name"
@@ -97,7 +101,7 @@
             </div>
             <button type="button" id="submit-customer-info">Submit</button>
           </form>
-
+</div>
           <!-- Success Message -->
           <div id="success-message" style="display: none">
             <p>
@@ -146,7 +150,7 @@
       <img
         src="./img/up-35.jpg"
         alt="Group Dining at Aba"
-        class="body-image"
+        class="body-image-closeup"
       />
     </div>
     <div class="wine-dinner-text">
